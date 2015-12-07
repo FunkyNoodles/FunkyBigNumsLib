@@ -137,6 +137,14 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FunkyBigNumber.h" />
+    <ClInclude Include="FunkyBigNumsLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FunkyBigNumber.cpp" />
+    <ClCompile Include="FunkyBigNumsLib.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
