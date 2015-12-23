@@ -7,6 +7,7 @@ class FunkyBigNumber
 {
 public:
 	FunkyBigNumber(long long number);
+	FunkyBigNumber(std::string numberInString);
 	~FunkyBigNumber();
 	std::string getValue();
 	void setValue();

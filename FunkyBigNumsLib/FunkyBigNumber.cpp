@@ -31,6 +31,23 @@ FunkyBigNumber::FunkyBigNumber(long long number)
 	std::cout << value << std::endl;
 }
 
+FunkyBigNumber::FunkyBigNumber(std::string numberInString)
+{
+	for (int i = 0; i < numberInString.length; i++)
+	{
+		if (numberInString[i] < 48 || numberInString[i] > 57)
+		{
+			std::cout << "Invalid Input" << std::endl;
+			return;
+		}
+		else if (numberInString[i] == 45 && i != 0)
+		{
+			std::cout << "Invalid Input" << std::endl;
+			return;
+		}
+	}
+	value = numberInString;
+}
 FunkyBigNumber::~FunkyBigNumber()
 {
 }
