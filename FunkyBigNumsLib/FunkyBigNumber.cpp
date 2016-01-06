@@ -2,7 +2,31 @@
 
 
 
+FunkyBigNumber::FunkyBigNumber()
+{
+	value = "";
+}
+
 FunkyBigNumber::FunkyBigNumber(long long number)
+{
+	setValue(number);
+	std::cout << value << std::endl;
+}
+
+FunkyBigNumber::FunkyBigNumber(std::string numberInString)
+{
+	setValue(numberInString);
+}
+FunkyBigNumber::~FunkyBigNumber()
+{
+}
+
+std::string FunkyBigNumber::getValue()
+{
+	return value;
+}
+
+void FunkyBigNumber::setValue(long long number)
 {
 	short digit;
 	if (number > 0)
@@ -28,10 +52,9 @@ FunkyBigNumber::FunkyBigNumber(long long number)
 	{
 		value = "0";
 	}
-	std::cout << value << std::endl;
 }
 
-FunkyBigNumber::FunkyBigNumber(std::string numberInString)
+void FunkyBigNumber::setValue(std::string numberInString)
 {
 	for (int i = 0; i < numberInString.length; i++)
 	{
@@ -47,12 +70,4 @@ FunkyBigNumber::FunkyBigNumber(std::string numberInString)
 		}
 	}
 	value = numberInString;
-}
-FunkyBigNumber::~FunkyBigNumber()
-{
-}
-
-std::string FunkyBigNumber::getValue()
-{
-	return value;
 }
